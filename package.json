@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "engines": {
     "node": ">=8"
-  },
+  },    
   "scripts": {
     "test": "mocha",
     "test:module2": "mocha test/module2.test.js",
@@ -13,7 +13,9 @@
     "test:module4": "mocha test/module4.test.js",
     "build": "babel src -d build",
     "build-clean": "rm -rf build",
-    "postbuild-clean": "npm run build"
+    "postbuild-clean": "npm run build",
+    "lint": "npx standard \"src/*.js\"",
+    "lint-fix": "npx standard \"src/*.js\" --fix"
   },
   "repository": {
     "type": "git",
